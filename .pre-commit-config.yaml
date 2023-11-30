@@ -1,26 +1,32 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v4.5.0
     hooks:
       - id: check-added-large-files
       - id: check-ast
+      - id: check-builtin-literals
       - id: check-case-conflict
       - id: check-docstring-first
       - id: check-merge-conflict
+      - id: check-toml
+      - id: check-yaml
       - id: debug-statements
       - id: detect-private-key
+      - id: double-quote-string-fixer
       - id: end-of-file-fixer
       - id: fix-byte-order-marker
       - id: mixed-line-ending
+      - id: trailing-whitespace
   - repo: https://github.com/psf/black
-    rev: 23.3.0
+    rev: 23.11.0
     hooks:
       - id: black
   - repo: https://github.com/PyCQA/isort
     rev: 5.12.0
     hooks:
       - id: isort
-  - repo: https://github.com/charliermarsh/ruff-pre-commit
-    rev: v0.0.270
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.1.6
     hooks:
       - id: ruff
+exclude: 2022/data/05.txt
