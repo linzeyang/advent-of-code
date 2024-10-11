@@ -13,9 +13,9 @@ class Solution:
 
     def part_one(self) -> int:
         """part one answer"""
-        
+
         matrix: list[str] = []
-        
+
         s_x = s_y = -1
 
         with self.INPUT_FILE_PATH.open(mode="r", encoding="utf-8") as file:
@@ -24,23 +24,27 @@ class Solution:
                 if "S" in line:
                     s_y = len(matrix) - 1
                     s_x = line.index("S")
-                    
+
         left_x, left_y, left_dir = s_x, s_y - 1, 1
         right_x, right_y, right_dir = s_x - 1, s_y, 2
 
         answer = 1
-        
+
         while left_x != right_x or left_y != right_y:
             left_x, left_y, left_dir = self._get_next(left_x, left_y, left_dir, matrix)
-            right_x, right_y, right_dir = self._get_next(right_x, right_y, right_dir, matrix)
-            
+            right_x, right_y, right_dir = self._get_next(
+                right_x, right_y, right_dir, matrix
+            )
+
             answer += 1
 
         return answer
-    
-    def _get_next(self, cord_x: int, cord_y: int, dir: int, matrix: list[str]) -> tuple[int, int, int]:
+
+    def _get_next(
+        self, cord_x: int, cord_y: int, dir: int, matrix: list[str]
+    ) -> tuple[int, int, int]:
         point = matrix[cord_y][cord_x]
-        
+
         if point == "-":
             if dir == 2:
                 return cord_x - 1, cord_y, 2

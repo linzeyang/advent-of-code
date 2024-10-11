@@ -168,8 +168,7 @@ class Solution:
 
     def _find_dest_ranges(
         self, rang: tuple[int, int], mapping: list[tuple[int, int, int]]
-    ) -> list[tuple[int, int]]:
-        ...  # TODO
+    ) -> list[tuple[int, int]]: ...  # TODO
 
     def print_answers(self) -> None:
         """Print both answers"""

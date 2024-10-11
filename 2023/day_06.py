@@ -38,9 +38,9 @@ class Solution:
 
         return answer
 
-    def solve(self, b: int, c: int)-> int:
-        x1 = 0.5 * (b - (b ** 2 - 4 * c) ** 0.5)
-        x2 = 0.5 * (b + (b ** 2 - 4 * c) ** 0.5)
+    def solve(self, b: int, c: int) -> int:
+        x1 = 0.5 * (b - (b**2 - 4 * c) ** 0.5)
+        x2 = 0.5 * (b + (b**2 - 4 * c) ** 0.5)
 
         if x1 == int(x1):
             x1 += 1

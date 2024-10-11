@@ -53,7 +53,7 @@ class Solution:
                 hand, val = line.split(" ")
                 hand_val_mapping[hand] = int(val)
                 classify(hand)
-                
+
         strength = dict(
             zip(
                 ["A", "K", "Q", "J", "T", "9", "8", "7", "6", "5", "4", "3", "2"],
@@ -121,9 +121,9 @@ class Solution:
         two_pair: list[str] = []
         one_pair: list[str] = []
         high_card: list[str] = []
-        
+
         hand_val_mapping: dict[str, int] = {}
-        
+
         def classify(hand: str) -> None:
             cou = Counter(hand)
 
@@ -134,7 +134,7 @@ class Solution:
             if num_j == 5 or num_j == 4:
                 five_of_a_kind.append(hand)
                 return
-            
+
             if num_j == 3:
                 if len(freq) == 2:
                     five_of_a_kind.append(hand)
@@ -191,7 +191,7 @@ class Solution:
         strength = dict(
             zip(
                 ["A", "K", "Q", "T", "9", "8", "7", "6", "5", "4", "3", "2", "J"],
-                list(range(13))[::-1]
+                list(range(13))[::-1],
             )
         )
 
