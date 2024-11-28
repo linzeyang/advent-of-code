@@ -25,7 +25,8 @@ repos:
     hooks:
       - id: isort
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.6.9
+    rev: v0.8.0
     hooks:
       - id: ruff
+        args: ["--config=./pyproject.toml"]
 exclude: 2022/data/05.txt|2023/data/13.txt
