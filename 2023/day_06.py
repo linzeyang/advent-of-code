@@ -20,7 +20,7 @@ class Solution:
             bs = [int(part) for part in file.readline().split(":")[1].strip().split()]
             cs = [int(part) for part in file.readline().split(":")[1].strip().split()]
 
-        for b, c in zip(bs, cs):
+        for b, c in zip(bs, cs, strict=True):
             answer *= self.solve(b, c)
 
         return answer

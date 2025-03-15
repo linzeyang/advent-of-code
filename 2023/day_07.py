@@ -13,7 +13,7 @@ class Solution:
 
     INPUT_FILE_PATH: Path = Path(__file__).parent / "data" / "07.txt"
 
-    def part_one(self) -> int:
+    def part_one(self) -> int:  # noqa: C901
         """part one answer"""
 
         five_of_a_kind: list[str] = []
@@ -58,6 +58,7 @@ class Solution:
             zip(
                 ["A", "K", "Q", "J", "T", "9", "8", "7", "6", "5", "4", "3", "2"],
                 list(range(13))[::-1],
+                strict=True,
             )
         )
 
@@ -65,7 +66,7 @@ class Solution:
             for idx in range(5):
                 if strength[hand1[idx]] < strength[hand2[idx]]:
                     return -1
-                elif strength[hand1[idx]] > strength[hand2[idx]]:
+                if strength[hand1[idx]] > strength[hand2[idx]]:
                     return 1
 
             return 0
@@ -111,7 +112,7 @@ class Solution:
 
         return answer
 
-    def part_two(self) -> int:
+    def part_two(self) -> int:  # noqa: C901
         """part two answer"""
 
         five_of_a_kind: list[str] = []
@@ -124,7 +125,7 @@ class Solution:
 
         hand_val_mapping: dict[str, int] = {}
 
-        def classify(hand: str) -> None:
+        def classify(hand: str) -> None:  # noqa: C901
             cou = Counter(hand)
 
             freq = sorted(cou.values(), reverse=True)
@@ -192,6 +193,7 @@ class Solution:
             zip(
                 ["A", "K", "Q", "T", "9", "8", "7", "6", "5", "4", "3", "2", "J"],
                 list(range(13))[::-1],
+                strict=True,
             )
         )
 
@@ -199,7 +201,7 @@ class Solution:
             for idx in range(5):
                 if strength[hand1[idx]] < strength[hand2[idx]]:
                     return -1
-                elif strength[hand1[idx]] > strength[hand2[idx]]:
+                if strength[hand1[idx]] > strength[hand2[idx]]:
                     return 1
 
             return 0

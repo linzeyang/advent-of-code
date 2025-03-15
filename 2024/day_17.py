@@ -92,7 +92,7 @@ class Solution:
         self.registers[1] = number % 8
 
     def _do_jnz(self, pos: int, number: int) -> int:
-        return  pos + 2 if not self.registers[0] else number
+        return pos + 2 if not self.registers[0] else number
 
     def _do_bdv(self, number: int) -> None:
         self.registers[1] = int(self.registers[0] / (2**number))
