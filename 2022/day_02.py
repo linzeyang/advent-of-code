@@ -51,9 +51,7 @@ class Solution:
         with self.INPUT_FILE_PATH.open(mode="r", encoding="utf-8") as file:
             while line := file.readline():
                 opponent, mine = line.split()
-                answer += (
-                    self.MAPPING[mine] + self.COMPETE[(opponent, mine)]  # type: ignore
-                )
+                answer += self.MAPPING[mine] + self.COMPETE[(opponent, mine)]
 
         return answer
 
@@ -65,10 +63,7 @@ class Solution:
         with self.INPUT_FILE_PATH.open(mode="r", encoding="utf-8") as file:
             while line := file.readline():
                 opponent, mine = line.split()
-                answer += (
-                    self.MAPPING2[mine]
-                    + self.COMPETE2[(opponent, mine)]  # type: ignore
-                )
+                answer += self.MAPPING2[mine] + self.COMPETE2[(opponent, mine)]
 
         return answer
 
