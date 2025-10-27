@@ -1,19 +1,20 @@
 [tool.black]
 line-length = 88
-target-version = ['py312']
+target-version = ["py312"]
 
 [tool.isort]
-py_version=312
+py_version = 312
 profile = "black"
 
 [tool.pylint.format]
 max-line-length = "88"
 
 [tool.ruff]
+src = ["."]
 line-length = 88
 target-version = "py312"
 output-format = "full"
 
 [tool.ruff.lint]
 select = ["B", "C", "E", "F", "I", "Q", "S", "W"]
-ignore = []
+ignore = ["C901"]

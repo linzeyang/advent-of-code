@@ -202,7 +202,7 @@ class Solution:
                     else:
                         gears[position].append(number)
 
-        for position, numbers in gears.items():
+        for numbers in gears.values():
             if len(numbers) == 2:
                 answer += numbers[0] * numbers[1]
 

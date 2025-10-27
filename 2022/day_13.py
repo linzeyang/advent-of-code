@@ -3,6 +3,7 @@
 https://adventofcode.com/2022/day/13
 """
 
+import ast
 from functools import cmp_to_key
 from pathlib import Path
 
@@ -53,7 +54,7 @@ class Solution:
         with self.INPUT_FILE_PATH.open(mode="r", encoding="utf-8") as file:
             while line := file.readline():
                 if line.strip():
-                    temp.append(eval(line.strip()))
+                    temp.append(ast.literal_eval(line.strip()))
                 else:
                     self.storage.append(temp)
                     temp = []

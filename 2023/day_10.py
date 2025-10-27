@@ -83,7 +83,7 @@ class Solution:
 
         with self.INPUT_FILE_PATH.open(mode="r", encoding="utf-8") as file:
             while line := file.readline().strip():
-                ...
+                print(len(line))  # TODO: implement logic
 
         return answer
 

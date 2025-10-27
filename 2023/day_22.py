@@ -96,7 +96,7 @@ class Solution:
 
         dependenci: set[Brick] = set()
 
-        for brick, dependencies in dependency_mapping.items():
+        for dependencies in dependency_mapping.values():
             if len(dependencies) == 1:
                 dep = next(iter(dependencies))
                 dependenci.add(dep)

@@ -29,7 +29,7 @@ class Solution:
         gamma_rate_bits: list[str] = []
         epsilon_rate_bits: list[str] = []
 
-        for idx, count in sorted(bit_one_by_column.items()):
+        for _, count in sorted(bit_one_by_column.items()):
             if count > num_of_lines // 2:
                 gamma_rate_bits.append("1")
                 epsilon_rate_bits.append("0")
