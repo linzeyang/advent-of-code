@@ -8,7 +8,7 @@ https://adventofcode.com/2024/day/2
 
 from pathlib import Path
 
-DATA_PATH = Path(__file__).parent / "data"
+DATA_PATH: Path = Path(__file__).parent / "data"
 
 
 class Solution:
@@ -24,34 +24,47 @@ class Solution:
     def part1(self) -> int:
         """part1"""
 
-        num_of_safe_reports = 0
+        return sum(1 for report in self.reports if self._is_safe_report(report))
 
-        for report in self.reports:
-            diff = report[1] - report[0]
+    def _is_safe_report(self, report: list[int]) -> bool:
+        """Check if a single report is safe"""
 
-            if abs(diff) < 1 or abs(diff) > 3:
-                continue
+        if len(report) < 2:
+            return True
 
-            increasing: bool = diff > 0
+        # Check if all differences are in valid range
+        diffs: list[int] = [report[i] - report[i - 1] for i in range(1, len(report))]
 
-            for idx in range(2, len(report)):
-                diff = report[idx] - report[idx - 1]
+        # All differences must be between -3 and -1 (decreasing)
+        # OR between 1 and 3 (increasing)
+        if not all((-3 <= diff <= -1 or 1 <= diff <= 3) for diff in diffs):
+            return False
 
-                if (increasing and (diff < 1 or diff > 3)) or (
-                    not increasing and (diff < -3 or diff > -1)
-                ):
-                    break
-            else:
-                num_of_safe_reports += 1
+        # Check if all increasing or all decreasing
+        increasing = all(diff > 0 for diff in diffs)
+        decreasing = all(diff < 0 for diff in diffs)
 
-        return num_of_safe_reports
+        return increasing or decreasing
 
     def part2(self) -> int:
         """part2"""
 
-        num_of_safe_reports = 0
+        num_of_safe_reports: int = 0
 
-        ...  # TODO
+        for report in self.reports:
+            # First check if the report is already safe
+            if self._is_safe_report(report):
+                num_of_safe_reports += 1
+                continue
+
+            # If not safe, try removing each level one at a time
+            for i in range(len(report)):
+                # Create a new report with the i-th level removed
+                modified_report: list[int] = report[:i] + report[i + 1 :]
+
+                if self._is_safe_report(modified_report):
+                    num_of_safe_reports += 1
+                    break  # Only need to find one valid removal
 
         return num_of_safe_reports
 
