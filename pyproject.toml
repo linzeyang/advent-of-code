@@ -1,3 +1,17 @@
+[project]
+name = "advent-of-code"
+version = "0.1.0"
+description = "Solutions for Advent of Code (https://adventofcode.com/)"
+authors = [
+    { name = "Zeyang Lin", email = "4020306+linzeyang@users.noreply.github.com" },
+]
+requires-python = ">=3.12"
+readme = "README.md"
+license = { text = "MIT" }
+
+[project.urls]
+Repository = "https://github.com/linzeyang/advent-of-code"
+
 [tool.black]
 line-length = 88
 target-version = ["py312"]
@@ -15,6 +29,26 @@ line-length = 88
 target-version = "py312"
 output-format = "full"
 
+[tool.ruff.format]
+docstring-code-format = true
+docstring-code-line-length = 80
+
 [tool.ruff.lint]
 select = ["B", "C", "E", "F", "I", "Q", "S", "W"]
 ignore = ["C901"]
+
+[tool.ty.environment]
+root = ["."]
+
+[tool.ty.rules]
+invalid-assignment = "ignore"
+invalid-return-type = "ignore"
+possibly-missing-attribute = "ignore"
+possibly-unresolved-reference = "ignore"
+unresolved-attribute = "ignore"
+unresolved-global = "ignore"
+unresolved-import = "ignore"
+unresolved-reference = "ignore"
+
+[tool.ty.terminal]
+output-format = "full"

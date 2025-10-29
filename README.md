@@ -1,5 +1,7 @@
 # advent-of-code
 
+![Advent of Code](./splash.jpg)
+
 Solutions for Advent of Code (https://adventofcode.com/)
 
 ## About Advent of Code
