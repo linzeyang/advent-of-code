@@ -1,8 +1,10 @@
 # advent-of-code
 
-![Advent of Code](./splash.jpg)
+Solutions for [Advent of Code](https://adventofcode.com/)
 
-Solutions for Advent of Code (https://adventofcode.com/)
+![Static Badge](https://img.shields.io/badge/language-python-blue?style=for-the-badge) [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff) ![GitHub Repo stars](https://img.shields.io/github/stars/linzeyang/advent-of-code?style=for-the-badge) ![GitHub forks](https://img.shields.io/github/forks/linzeyang/advent-of-code?style=for-the-badge) ![GitHub last commit](https://img.shields.io/github/last-commit/linzeyang/advent-of-code?style=for-the-badge) ![GitHub License](https://img.shields.io/github/license/linzeyang/advent-of-code?style=for-the-badge)
+
+![Advent of Code](./splash.jpg)
 
 ## About Advent of Code
 
