@@ -14,6 +14,7 @@ Every year from December 1st to December 25th, a new set of puzzles is released.
 
 **Note that from year 2025 and onwards, due to personal availability of the maker of Advent of Code, there would be only 12 days of puzzles released each year, from 1st of December to 12th of December.**
 
+- Puzzles of year 2025: https://adventofcode.com/2025
 - Puzzles of year 2024: https://adventofcode.com/2024
 - Puzzles of year 2023: https://adventofcode.com/2023
 - Puzzles of year 2022: https://adventofcode.com/2022

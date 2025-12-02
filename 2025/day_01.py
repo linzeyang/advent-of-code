@@ -1,9 +1,9 @@
 """
 day_01.py
 
-Day 01: Secret Entrance
+Day 1: Secret Entrance
 
-https://adventofcode.com/2025/day/01
+https://adventofcode.com/2025/day/1
 """
 
 from pathlib import Path
