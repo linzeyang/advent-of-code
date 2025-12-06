@@ -35,4 +35,4 @@ repos:
     rev: 7.0.0
     hooks:
       - id: isort
-exclude: 2022/data/05.txt|2023/data/13.txt
+exclude: 2022/data/05.txt|2023/data/13.txt|2025/data/06.txt
