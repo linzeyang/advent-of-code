@@ -20,10 +20,11 @@ Every year from December 1st to December 25th, a new set of puzzles is released.
 - Puzzles of year 2022: https://adventofcode.com/2022
 - Puzzles of year 2021: https://adventofcode.com/2021
 - Puzzles of year 2020: https://adventofcode.com/2020
+- Puzzles of year 2019: https://adventofcode.com/2019
 
 ## About this repository
 
-This repository contains my solutions for Advent of Code (year 2020 to 2025 for the moment). Each year's puzzles are stored in a separate folder, named after the year. Within each year's folder, you will find the solutions for each day's puzzles.
+This repository contains my solutions for Advent of Code (year 2019 to 2025 for the moment). Each year's puzzles are stored in a separate folder, named after the year. Within each year's folder, you will find the solutions for each day's puzzles.
 
 The solutions are currently implemented in Python. Each file contains the solution for a specific day's puzzle, with the filename corresponding to the day (e.g., `day_01.py` for Day 1).
 
