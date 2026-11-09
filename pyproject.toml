@@ -50,7 +50,7 @@ possibly-missing-attribute = "ignore"
 possibly-unresolved-reference = "ignore"
 unresolved-attribute = "ignore"
 unresolved-global = "ignore"
-unresolved-import = "ignore"
+import-not-found = "ignore"
 unresolved-reference = "ignore"
 
 [tool.ty.terminal]
