@@ -21,6 +21,7 @@ Every year from December 1st to December 25th, a new set of puzzles is released.
 - Puzzles of year 2021: https://adventofcode.com/2021
 - Puzzles of year 2020: https://adventofcode.com/2020
 - Puzzles of year 2019: https://adventofcode.com/2019
+- Puzzles of year 2018: https://adventofcode.com/2018
 
 ## About this repository
 
