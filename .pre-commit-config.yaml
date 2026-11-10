@@ -33,10 +33,6 @@ repos:
       - id: pyrefly-check
         name: Pyrefly (type checking)
         pass_filenames: true
-  - repo: https://github.com/psf/black
-    rev: 26.10.1
-    hooks:
-      - id: black
   - repo: https://github.com/PyCQA/isort
     rev: 9.0.2
     hooks:

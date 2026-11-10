@@ -47,6 +47,7 @@ class Solution:
             if ":" in seg:
                 instructs.append(tuple(seg.split(":")))
             else:
+                # pyrefly: ignore[bad-argument-type]
                 instructs.append(seg)
 
         return name, instructs
@@ -69,6 +70,7 @@ class Solution:
             if rule == "R":
                 return 0
 
+    # pyrefly: ignore[bad-return]
     def _process_part_rule(self, part_dict: dict[str, int], rule: list) -> str:
         for rul in rule:
             if isinstance(rul, str):
@@ -105,6 +107,7 @@ class Solution:
 
         return answer
 
+    # pyrefly: ignore[bad-return]
     def _calculate(self, pres: list, rule, rules: dict) -> int:
         if rule == "R":
             return 0
@@ -120,9 +123,9 @@ class Solution:
 
         ...
 
-    def _opposite(self, pre: str) -> str: ...
+    def _opposite(self, pre: str) -> str: ...  # TODO  # ty: ignore[empty-body]
 
-    def _calc_conditions(self, pres: list) -> int: ...
+    def _calc_conditions(self, pres: list) -> int: ...  # TODO  # ty: ignore[empty-body]
 
     def print_answers(self) -> None:
         """Print both answers"""

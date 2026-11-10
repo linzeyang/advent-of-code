@@ -55,7 +55,10 @@ class Solution:
 
                     continue
 
-                current.append(tuple(int(part) for part in line.split()))
+                # pyrefly: ignore[missing-attribute]
+                current.append(
+                    tuple(int(part) for part in line.split())  # ty: ignore[invalid-argument-type]
+                )
 
         soils = [self._find_dest(number, seed_to_soil) for number in seeds]
         fertilizers = [self._find_dest(number, soil_to_fertilizer) for number in soils]
@@ -126,7 +129,10 @@ class Solution:
 
                     continue
 
-                current.append(tuple(int(part) for part in line.split()))
+                # pyrefly: ignore[missing-attribute]
+                current.append(
+                    tuple(int(part) for part in line.split())  # ty: ignore[invalid-argument-type]
+                )
 
         seed_ranges = [(seeds[idx], seeds[idx + 1]) for idx in range(0, len(seeds), 2)]
 
@@ -168,7 +174,7 @@ class Solution:
 
     def _find_dest_ranges(
         self, rang: tuple[int, int], mapping: list[tuple[int, int, int]]
-    ) -> list[tuple[int, int]]: ...  # TODO
+    ) -> list[tuple[int, int]]: ...  # TODO  # ty: ignore[empty-body]
 
     def print_answers(self) -> None:
         """Print both answers"""

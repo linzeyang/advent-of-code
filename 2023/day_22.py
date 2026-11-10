@@ -6,8 +6,6 @@ https://adventofcode.com/2023/day/22
 from dataclasses import dataclass
 from pathlib import Path
 
-from typing_extensions import Self
-
 
 @dataclass
 class Brick:
@@ -17,7 +15,7 @@ class Brick:
     def __hash__(self) -> int:
         return hash((self.start, self.end))
 
-    def __eq__(self, __value: Self) -> bool:
+    def __eq__(self, __value) -> bool:
         return self.start == __value.start and self.end == __value.end
 
 

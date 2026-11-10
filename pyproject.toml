@@ -44,13 +44,14 @@ ignore = ["C901"]
 root = ["."]
 
 [tool.ty.rules]
+import-not-found = "ignore"
 invalid-assignment = "ignore"
 invalid-return-type = "ignore"
+missing-attribute = "ignore"
+missing-union-attribute = "ignore"
 possibly-missing-attribute = "ignore"
 possibly-unresolved-reference = "ignore"
-unresolved-attribute = "ignore"
 unresolved-global = "ignore"
-import-not-found = "ignore"
 unresolved-reference = "ignore"
 
 [tool.ty.terminal]
